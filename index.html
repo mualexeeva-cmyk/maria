@@ -586,79 +586,277 @@
         function getPlanetPositions() { return window.innerWidth <= 768 ? planetPositionsMobile : planetPositionsDesktop; }
         const planetPositions = getPlanetPositions();
         const questionDatabase = [
-            { 
-                keyword: "Столица Франции", 
-                question: "Какой город является столицей Франции?", 
-                correct: "Париж", 
-                wrong1: "Лион", 
-                wrong2: "Марсель", 
-                wrong3: "Ницца",
-                explanation: "Париж — столица и крупнейший город Франции." 
-            },
-            { 
-                keyword: "Математика", 
-                question: "Чему равен корень из 144?", 
-                correct: "12", 
-                wrong1: "14", 
-                wrong2: "11", 
-                wrong3: "13",
-                explanation: "12 × 12 = 144." 
-            },
-                       { 
-                keyword: "Орфография", 
-                question: "Какое из слов написано правильно?", 
-                correct: "стеклянный", 
-                wrong1: "оловяный", 
-                wrong2: "ветренный", 
-                wrong3: "песчанныйй",
-                explanation: "'Стеклянный' — исключение, пишется с НН. Остальные варианты содержат ошибки." 
-            },
-            { 
-                keyword: "Биология", 
-                question: "Какая органелла отвечает за выработку энергии в клетке?", 
-                correct: "Митохондрия", 
-                wrong1: "Рибосома", 
-                wrong2: "Лизосома", 
-                wrong3: "Ядро",
-                explanation: "Митохондрии называют 'энергетическими станциями' клетки." 
-            },
-            { 
-                keyword: "История", 
-                question: "В каком году началась Великая Отечественная война?", 
-                correct: "1941", 
-                wrong1: "1939", 
-                wrong2: "1945", 
-                wrong3: "1942",
-                explanation: "Война началась 22 июня 1941 года." 
-            },
-            { 
-                keyword: "Английский язык", 
-                question: "Выберите правильный перевод: 'Я никогда не был в Лондоне'", 
-                correct: "I have never been to London", 
-                wrong1: "I never was in London", 
-                wrong2: "I have never went to London", 
-                wrong3: "I was never in London",
-                explanation: "Используется Present Perfect с наречием never." 
-            },
-            { 
-                keyword: "География", 
-                question: "Самый большой океан на Земле?", 
-                correct: "Тихий", 
-                wrong1: "Атлантический", 
-                wrong2: "Индийский", 
-                wrong3: "Северный Ледовитый",
-                explanation: "Тихий океан занимает около 46% водной поверхности Земли." 
-            },
-            { 
-                keyword: "Физика", 
-                question: "В каких единицах измеряется сила тока?", 
-                correct: "Амперы", 
-                wrong1: "Вольты", 
-                wrong2: "Джоули", 
-                wrong3: "Ватты",
-                explanation: "Сила тока измеряется в Амперах (А)." 
-            }
-        ];
+    {
+        keyword: "Past Simple",
+        question: "Complete the sentence: 'Yesterday I ___ (go) to school.'",
+        correct: "went",
+        wrong1: "goed",
+        wrong2: "gone",
+        wrong3: "going",
+        explanation: "The past simple of 'go' is 'went'. It's an irregular verb, so we don't add '-ed'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "What is the past participle of 'eat'?",
+        correct: "eaten",
+        wrong1: "eated",
+        wrong2: "ate",
+        wrong3: "eating",
+        explanation: "'Eat' is irregular: eat-ate-eaten. The past participle is 'eaten', used with have/has/had."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Choose the correct form: 'She ___ (see) a movie last night.'",
+        correct: "saw",
+        wrong1: "seen",
+        wrong2: "seed",
+        wrong3: "seeing",
+        explanation: "'See' is irregular: see-saw-seen. For Past Simple we use 'saw'."
+    },
+    {
+        keyword: "Present Perfect",
+        question: "Fill in the gap: 'I have never ___ (be) to London.'",
+        correct: "been",
+        wrong1: "was",
+        wrong2: "were",
+        wrong3: "being",
+        explanation: "'Be' is irregular: be-was/were-been. With 'have' we need the past participle 'been'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "What is the past form of 'buy'?",
+        correct: "bought",
+        wrong1: "buyed",
+        wrong2: "brought",
+        wrong3: "buying",
+        explanation: "'Buy' is irregular: buy-bought-bought. Don't confuse it with 'bring' (brought)."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Complete: 'He has ___ (write) three letters today.'",
+        correct: "written",
+        wrong1: "wrote",
+        wrong2: "writed",
+        wrong3: "writing",
+        explanation: "'Write' is irregular: write-wrote-written. Present Perfect requires the past participle 'written'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Choose the correct verb: 'They ___ (drink) all the juice yesterday.'",
+        correct: "drank",
+        wrong1: "drunk",
+        wrong2: "drinked",
+        wrong3: "drinking",
+        explanation: "'Drink' is irregular: drink-drank-drunk. Past Simple uses 'drank'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "What is the third form of 'break'?",
+        correct: "broken",
+        wrong1: "broke",
+        wrong2: "breaked",
+        wrong3: "breaking",
+        explanation: "'Break' is irregular: break-broke-broken. The third form (past participle) is 'broken'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Complete: 'We ___ (take) a taxi to the airport.'",
+        correct: "took",
+        wrong1: "taken",
+        wrong2: "taked",
+        wrong3: "taking",
+        explanation: "'Take' is irregular: take-took-taken. In Past Simple we use 'took'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Fill in: 'She has ___ (give) me a present.'",
+        correct: "given",
+        wrong1: "gave",
+        wrong2: "gived",
+        wrong3: "giving",
+        explanation: "'Give' is irregular: give-gave-given. Present Perfect needs the past participle 'given'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "What is the past tense of 'come'?",
+        correct: "came",
+        wrong1: "comed",
+        wrong2: "come",
+        wrong3: "coming",
+        explanation: "'Come' is irregular: come-came-come. The past simple form is 'came'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Complete: 'I have ___ (know) him for ten years.'",
+        correct: "known",
+        wrong1: "knew",
+        wrong2: "knowed",
+        wrong3: "knowing",
+        explanation: "'Know' is irregular: know-knew-known. With 'have' we use the past participle 'known'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Choose the correct form: 'He ___ (run) very fast yesterday.'",
+        correct: "ran",
+        wrong1: "runned",
+        wrong2: "run",
+        wrong3: "running",
+        explanation: "'Run' is irregular: run-ran-run. Past Simple uses 'ran'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "What is the third form of 'sing'?",
+        correct: "sung",
+        wrong1: "sang",
+        wrong2: "singed",
+        wrong3: "singing",
+        explanation: "'Sing' is irregular: sing-sang-sung. The past participle is 'sung'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Complete: 'They ___ (swim) in the lake last summer.'",
+        correct: "swam",
+        wrong1: "swum",
+        wrong2: "swimmed",
+        wrong3: "swimming",
+        explanation: "'Swim' is irregular: swim-swam-swum. Past Simple requires 'swam'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Fill in: 'She has ___ (begin) her homework.'",
+        correct: "begun",
+        wrong1: "began",
+        wrong2: "begined",
+        wrong3: "beginning",
+        explanation: "'Begin' is irregular: begin-began-begun. Present Perfect uses the past participle 'begun'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "What is the past form of 'fly'?",
+        correct: "flew",
+        wrong1: "flied",
+        wrong2: "flown",
+        wrong3: "flying",
+        explanation: "'Fly' is irregular: fly-flew-flown. The past simple is 'flew'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Complete: 'He has ___ (grow) a beard.'",
+        correct: "grown",
+        wrong1: "grew",
+        wrong2: "growed",
+        wrong3: "growing",
+        explanation: "'Grow' is irregular: grow-grew-grown. We need the past participle 'grown' after 'has'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Choose the correct verb: 'I ___ (throw) the ball to my friend.'",
+        correct: "threw",
+        wrong1: "thrown",
+        wrong2: "throwed",
+        wrong3: "throwing",
+        explanation: "'Throw' is irregular: throw-threw-thrown. Past Simple uses 'threw'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "What is the third form of 'wear'?",
+        correct: "worn",
+        wrong1: "wore",
+        wrong2: "weared",
+        wrong3: "wearing",
+        explanation: "'Wear' is irregular: wear-wore-worn. The past participle is 'worn'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Complete: 'She ___ (teach) English for five years.'",
+        correct: "taught",
+        wrong1: "teached",
+        wrong2: "taughted",
+        wrong3: "teaching",
+        explanation: "'Teach' is irregular: teach-taught-taught. Past Simple and past participle are both 'taught'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Fill in: 'They have ___ (catch) the bus.'",
+        correct: "caught",
+        wrong1: "catched",
+        wrong2: "caughted",
+        wrong3: "catching",
+        explanation: "'Catch' is irregular: catch-caught-caught. Present Perfect needs 'caught'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "What is the past tense of 'find'?",
+        correct: "found",
+        wrong1: "finded",
+        wrong2: "founded",
+        wrong3: "finding",
+        explanation: "'Find' is irregular: find-found-found. Past Simple is 'found'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Complete: 'He has ___ (lose) his keys.'",
+        correct: "lost",
+        wrong1: "losed",
+        wrong2: "losted",
+        wrong3: "losing",
+        explanation: "'Lose' is irregular: lose-lost-lost. The past participle is 'lost'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Choose the correct form: 'We ___ (build) a house last year.'",
+        correct: "built",
+        wrong1: "builded",
+        wrong2: "builded",
+        wrong3: "building",
+        explanation: "'Build' is irregular: build-built-built. Past Simple uses 'built'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "What is the third form of 'send'?",
+        correct: "sent",
+        wrong1: "sended",
+        wrong2: "sented",
+        wrong3: "sending",
+        explanation: "'Send' is irregular: send-sent-sent. The past participle is 'sent'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "Complete: 'I ___ (sleep) well last night.'",
+        correct: "slept",
+        wrong1: "sleeped",
+        wrong2: "slepted",
+        wrong3: "sleeping",
+        explanation: "'Sleep' is irregular: sleep-slept-slept. Past Simple is 'slept'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Fill in: 'She has ___ (keep) the secret.'",
+        correct: "kept",
+        wrong1: "keeped",
+        wrong2: "kepted",
+        wrong3: "keeping",
+        explanation: "'Keep' is irregular: keep-kept-kept. Present Perfect requires 'kept'."
+    },
+    {
+        keyword: "Past Simple",
+        question: "What is the past form of 'leave'?",
+        correct: "left",
+        wrong1: "leaved",
+        wrong2: "lefted",
+        wrong3: "leaving",
+        explanation: "'Leave' is irregular: leave-left-left. Past Simple is 'left'."
+    },
+    {
+        keyword: "Past Participle",
+        question: "Complete: 'They have ___ (meet) the president.'",
+        correct: "met",
+        wrong1: "meeted",
+        wrong2: "metted",
+        wrong3: "meeting",
+        explanation: "'Meet' is irregular: meet-met-met. The past participle is 'met'."
+    }
+];
 
         let studentName = '', selectedCharacter = null, currentQuestions = [], currentIndex = 0, score = 0;
         let startTime = null, timerInterval = null, selectedAnswer = null, currentPlanetIndex = 0;
@@ -975,7 +1173,7 @@
             
             const payload = { 
                 student_name: studentName, score: `${score}/${currentQuestions.length}`, percentage: `${percentage}%`, 
-                time: new Date().toLocaleString(), exercise_name: "Универсальная Игра: Кибер-портал", time_spent: timeSpent, 
+                time: new Date().toLocaleString(), exercise_name: "Универсальная Игра: Глаголы", time_spent: timeSpent, 
                 tab_switches: tabSwitchCount === 0 ? '0' : `${tabSwitchCount}`,
                 selected_bonus: bonusNames[selectedBonus] || 'Не выбран',
                 errors_text: `БОНУС: ${bonusNames[selectedBonus]}\n\nОШИБКИ:\n${errorsText}`
